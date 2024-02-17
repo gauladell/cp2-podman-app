@@ -5,7 +5,7 @@ COPY app /var/www/html
 #Copiamos el archivo de .htpasswd para poder pedir contraseña al acceder a la página
 COPY nginx_config/.htpasswd /etc/nginx/.htpasswd
 #Copiamos el archivo de configuración de nginx
-COPY nginx_config/site.conf /etc/nginx/conf/conf.d/default.conf
+COPY nginx_config/site.conf /etc/nginx/conf.d/default.conf
 #Exponemos el puerto 80
 EXPOSE 80
 #Ejecutamos nginx como servidor web
